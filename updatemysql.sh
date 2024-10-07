@@ -5,7 +5,9 @@ DB_USER="root"         # Replace with your MySQL username
 DB_PASS="1111"     # Replace with your MySQL password
 DB_NAME="testsets"   # Replace with your database name
 DB_HOST="localhost"            # Replace with your host, usually 'localhost'
-SQL_FILE="jcsql.sql"  # Replace with the path to your SQL file
+SQL_FILE="~/server/updatedb/jcsql.sql"  # Replace with the path to your SQL file
+
+sudo chmod 777 ~/server/updatedb/jcsql.sql
 
 # Function to check if the SQL file exists
 if [ ! -f "$SQL_FILE" ]; then

@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `Classes` (
   `project` varchar(100) DEFAULT NULL,
   `Name` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Check if column 'id' exists
 SELECT COUNT(*) INTO @id_exists
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `Examples` (
   `name` varchar(100) DEFAULT NULL,
   `type` varchar(100) DEFAULT NULL,
   `level` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 -- Check if column 'name' exists
@@ -156,7 +156,7 @@ CREATE TABLE IF NOT EXISTS `Models` (
   `shape` varchar(100) DEFAULT NULL,
   `description` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 -- Check if column 'id' exists
@@ -253,7 +253,7 @@ CREATE TABLE IF NOT EXISTS `Projects` (
   `section` int DEFAULT NULL,
   `subsection` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Check if column 'id' exists
 SELECT COUNT(*) INTO @id_exists
@@ -424,7 +424,7 @@ CREATE TABLE IF NOT EXISTS `UserModels` (
   `Model` varchar(100) DEFAULT NULL,
   `uuid` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Step 2: Add missing columns
 
@@ -514,7 +514,7 @@ CREATE TABLE IF NOT EXISTS `WorkingDirectory` (
   `projectname` varchar(100) DEFAULT NULL,
   `location` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- Check if column 'id' exists
 SELECT COUNT(*) INTO @id_exists
@@ -569,7 +569,7 @@ DEALLOCATE PREPARE stmt;
 -- Create the table 'YoloBoxes' if it does not exist
 CREATE TABLE IF NOT EXISTS `YoloBoxes` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Name` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
   `x` varchar(100) DEFAULT NULL,
   `y` varchar(100) DEFAULT NULL,
   `w` varchar(100) DEFAULT NULL,
@@ -580,7 +580,7 @@ CREATE TABLE IF NOT EXISTS `YoloBoxes` (
   `projectname` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `YoloBoxes_YoloImage_FK` (`Name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- Check if column 'id' exists
 SELECT COUNT(*) INTO @id_exists
@@ -748,10 +748,10 @@ DEALLOCATE PREPARE stmt;
 CREATE TABLE IF NOT EXISTS `YoloImage` (
   `id` int NOT NULL AUTO_INCREMENT,
   `project` varchar(100) DEFAULT NULL,
-  `Name` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Name` varchar(100) CHARACTER SET utf8mb4 DEFAULT NULL,
   `type` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- Check if column 'id' exists
 SELECT COUNT(*) INTO @id_exists FROM information_schema.COLUMNS
